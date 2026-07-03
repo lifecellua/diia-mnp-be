@@ -1,0 +1,117 @@
+{
+  "topGroup": [
+    {
+      "topGroupOrg": {
+        "navigationPanelMlc": {
+          "componentId": "navigation_panel",
+          "label": "Перенесення номера",
+          "ellipseMenu": [
+            {
+              "type": "faqCategory",
+              "name": "Питання та відповіді",
+              "code": "lifecellMpn"
+            },
+            {
+              "type": "supportServiceScreen",
+              "name": "Служба підтримки"
+            }
+          ],
+          "iconAtm": {
+            "componentId": "back",
+            "code": "back",
+            "accessibilityDescription": "Назад",
+            "action": {
+              "type": "back"
+            }
+          }
+        },
+        "componentId": "top_group_org"
+      }
+    }
+  ],
+  "body": [
+    {
+      "titleLabelMlc": {
+        "componentId": "title_label",
+        "label": "Оберіть тариф"
+      }
+    },
+    {
+      "attentionIconMessageMlc": {
+        "componentId": "attention_select_tariff",
+        "smallIconAtm": {
+          "componentId": "small_icon_atm",
+          "code": "ellipseInfo"
+        },
+        "text": "Рекомендуємо обрати стартовий пакет без визначеного тарифного плану — «Універсальний».",
+        "backgroundMode": "note"
+      }
+    },
+    {
+      "cardMlcV2": {
+        "chipStatusAtm": {
+          "componentId": "tariff_id_status",
+          "code": "pending",
+          "name": "ДОСТУПНИЙ ПІЛЬГОВИЙ ТАРИФ",
+          "type": "pending"
+        },
+        "componentId": "tariff_id",
+        "label": "%%NAME%%\n%%PRICE%%",
+        "descriptions": [
+          "%%DESCRIPTION%%"
+        ],
+        "chips": [
+          {
+            "chipStatusAtm": {
+              "componentId": "chip_atom",
+              "code": "%%CHIP%%",
+              "name": "%%CHIP%%",
+              "type": "white"
+            }
+          }
+        ],
+        "iconUrlAtm": {
+          "componentId": "icon_url_atm",
+          "url": "%%ICON%%",
+          "accessibilityDescription": "Іконка тарифу"
+        },
+        "smallIconAtm": {
+          "code": "ellipseArrowRight"
+        },
+        "action": {
+          "type": "tariffs-post",
+          "resource": "%%ID%%"
+        },
+        "paddingMode": {
+          "side": "large",
+          "top": "large"
+        }
+      }
+    },
+    {
+      "listItemGroupOrg": {
+        "componentId": "tariff_link",
+        "paddingMode": {
+          "side": "large",
+          "top": "medium"
+        },
+        "items": [
+          {
+            "accessibilityDescription": "Детальніше про тариф %%NAME%%. Перегляд відкриється у вікні браузера",
+            "iconLeft": {
+              "code": "oldFaq"
+            },
+            "label": "Детальніше про тариф %%NAME%%",
+            "iconRight": {
+              "code": "outLink"
+            },
+            "action": {
+              "type": "link",
+              "resource": "%%LINK%%"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

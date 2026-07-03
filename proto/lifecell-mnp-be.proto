@@ -1,0 +1,215 @@
+syntax = "proto3";
+
+package com.lifecell.diia.be;
+
+import "google/protobuf/empty.proto";
+import "google/api/annotations.proto";
+import "diia-lifecell-protocol.proto";
+
+option java_package = "com.lifecell.diia.grpc.service";
+option java_multiple_files = true;
+
+service Mnp {
+
+    // Branch 0 - start
+
+    rpc FormStartGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp"
+        };
+    }
+
+    // Branch 1 - intro from orders
+
+    rpc FormIntroGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/intro"
+        };
+    };
+
+    // Branch 1 - tariffs
+
+    rpc FormTariffsGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/tariffs"
+        };
+    };
+
+    rpc FormTariffsPost(FormTariffsPostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/tariffs"
+            body: "*"
+        };
+    }
+
+    // Branch 1 - phone
+
+    rpc FormPhoneGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/phone"
+        };
+    };
+
+    rpc FormPhonePost(FormPhonePostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/phone"
+            body: "*"
+        };
+    }
+
+    // Branch 1 - otp
+
+    rpc FormOtpGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/otp"
+        };
+    }
+
+    rpc FormOtpCheckPost(FormOtpPostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/otp"
+            body: "*"
+        };
+    }
+
+    rpc FormOtpSendPost(google.protobuf.Empty) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/otp/send"
+            body: "*"
+        };
+    }
+
+    // Branch 1 - contract
+
+    rpc FormAgreementGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/agreement"
+        };
+    }
+
+    rpc DataAgreementFileGet(google.protobuf.Empty) returns (DataAgreementFileGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/agreement/file"
+        };
+    }
+
+    // Branch -1 - sim-intro
+
+    rpc FormSimIntroGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/sim-intro"
+        };
+    }
+
+    // Branch 1 - sim
+
+    rpc FormSimGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/sim"
+        };
+    }
+
+    rpc FormSimPost(FormSimPostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/sim"
+            body: "*"
+        };
+    }
+
+    // Branch 1 - commit
+
+    rpc FormCommitGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/commit"
+        };
+    }
+
+    // Branch 2 - order
+
+    rpc FormOrderByIdGet(FormOrderGetRequest) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+          get: "/api/v1/public-service/lifecell/mnp/order/{orderId}"
+        };
+    }
+
+    rpc FormOrderGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/order"
+        };
+    }
+
+    rpc FormOrderSimOtpGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/order/sim/otp"
+        };
+    }
+
+    rpc FormOrderSimOtpCheckPost(FormOtpPostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/order/sim/otp"
+            body: "*"
+        };
+    }
+
+    rpc FormOrderSimOtpSendPost(google.protobuf.Empty) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/order/sim/otp/send"
+            body: "*"
+        };
+    }
+
+  rpc FormOrderSimGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/order/sim"
+        };
+    }
+
+    rpc FormOrderSimPost(FormSimPostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/order/sim"
+            body: "*"
+        };
+    }
+
+    rpc FormOrderCancelGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/order/cancel"
+        };
+    }
+
+    rpc FormOrderCancelOtpGet(google.protobuf.Empty) returns (FormAnyGetResponse) {
+        option (google.api.http) = {
+            get: "/api/v1/public-service/lifecell/mnp/order/cancel/otp"
+        };
+    }
+
+    rpc FormOrderCancelOtpCheckPost(FormOtpPostRequest) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/order/cancel/otp"
+            body: "*"
+        };
+    }
+
+    rpc FormOrderCancelOtpSendPost(google.protobuf.Empty) returns (FormAnyPostResponse) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/lifecell/mnp/order/cancel/otp/send"
+            body: "*"
+        };
+    }
+
+    // Callbacks
+
+    rpc ApplicationFile(ApplicationFilePostRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/partner/lifecell-mnp/application-file"
+            body: "*"
+        };
+    }
+
+    rpc ApplicationStatus(ApplicationStatusPostRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+            post: "/api/v1/public-service/partner/lifecell-mnp/application-status"
+            body: "*"
+        };
+    }
+}

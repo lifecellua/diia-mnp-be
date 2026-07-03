@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+package com.lifecell.diia.be;
+
+import "designSystem/item.proto";
+import "processData.proto";
+import "google/protobuf/struct.proto";
+
+option java_package = "com.lifecell.diia.grpc.model";
+option java_multiple_files = true;
+
+// Generic messages
+
+// Look at DesignSystemResponse
+message FormAnyGetResponse {
+    repeated ua.gov.diia.types.ds.item.DSTopGroupItem topGroup = 1;
+    repeated ua.gov.diia.types.ds.item.DSBodyItem body = 2;
+    repeated ua.gov.diia.types.ds.item.DSBottomGroupItem bottomGroup = 3;
+    optional int32 processCode = 4;
+}
+
+message FormAnyPostResponse {
+    optional string nextStep = 1;
+    optional int32 processCode = 2;
+}
+
+// Specific messages
+
+// Branch 1
+
+message FormTariffsPostRequest {
+    string tariffId = 1;
+}
+
+message FormPhonePostRequest {
+    string country = 1;
+    string phone = 2;
+}
+
+message FormOtpPostRequest {
+    string otp = 2;
+}
+
+message FormSimIntroPostRequest {
+    bool sim = 1;
+}
+
+message FormSimPostRequest {
+    string iccid = 1;
+    string puk1 = 2;
+}
+
+// Branch 2
+
+message FormOrderGetRequest {
+    string orderId = 1;
+}
+
+//Other messages
+
+message DataAgreementFileGetResponse {
+  string agreement = 1;
+  optional int32 processCode = 2;
+}
+
+// Callback messages
+
+message ApplicationFilePostRequest {
+  string applicationId = 1;
+  string documentId = 2;
+  string documentName = 3;
+  string documentData = 4;
+}
+
+message ApplicationStatusPostRequest {
+  string applicationId = 1;
+  string status = 2;
+  string reason = 3;
+  google.protobuf.Struct applicationData = 4;
+}

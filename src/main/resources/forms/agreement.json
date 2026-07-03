@@ -1,0 +1,190 @@
+{
+  "topGroup": [
+    {
+      "topGroupOrg": {
+        "navigationPanelMlc": {
+          "componentId": "navigation_panel",
+          "label": "Перенесення номера",
+          "ellipseMenu": [
+            {
+              "type": "faqCategory",
+              "name": "Питання та відповіді",
+              "code": "lifecellMpn"
+            },
+            {
+              "type": "supportServiceScreen",
+              "name": "Служба підтримки"
+            }
+          ],
+          "iconAtm": {
+            "componentId": "back",
+            "code": "back",
+            "accessibilityDescription": "Назад",
+            "action": {
+              "type": "back"
+            }
+          }
+        },
+        "componentId": "top_group_org"
+      }
+    }
+  ],
+  "body": [
+    {
+      "tickerAtm": {
+        "componentId": "ticker_phone_number",
+        "usage": "document",
+        "type": "warning",
+        "value": "Не вставляйте SIM-карту до завершення перенесення • "
+      }
+    },
+    {
+      "titleLabelMlc": {
+        "componentId": "title_label",
+        "label": "Заява про перенесення номера"
+      }
+    },
+    {
+      "attentionIconMessageMlc": {
+        "componentId": "attention_phone_number",
+        "smallIconAtm": {
+          "componentId": "small_icon_atm",
+          "code": "attention"
+        },
+        "text": "Далі потрібно додати дані SIM-карти. Це можна зробити пізніше, але лише після їх додавання ми повідомимо точний час перенесення номера. На завершальному етапі зв’язок може бути недоступний. Він триває максимум до трьох годин.",
+        "expanded": {
+          "expandedText": "Розгорнути",
+          "collapsedText": "Згорнути",
+          "isExpanded": false
+        },
+        "backgroundMode": "info"
+      }
+    },
+    {
+      "tableBlockOrg": {
+        "componentId": "user_data_table",
+        "tableMainHeadingMlc": {
+          "componentId": "user_data_table_title",
+          "label": "Персональні дані"
+        },
+        "items": [
+          {
+            "tableItemHorizontalMlc": {
+              "componentId": "table_item_horizontal_mlc_1",
+              "label": "ПІБ:",
+              "value": "Дія Надія Володимирівна"
+            }
+          },
+          {
+            "tableItemHorizontalMlc": {
+              "componentId": "table_item_horizontal_mlc_2",
+              "label": "Документ, що посвідчує особу:",
+              "value": "ID паспорт"
+            }
+          },
+          {
+            "tableItemHorizontalMlc": {
+              "componentId": "table_item_horizontal_mlc_3",
+              "label": "Серія та номер:",
+              "value": "12345678"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tableBlockOrg": {
+        "componentId": "user_phone_table",
+        "tableMainHeadingMlc": {
+          "componentId": "user_phone_table_title",
+          "label": "Дані про перенесення"
+        },
+        "items": [
+          {
+            "tableItemVerticalMlc": {
+              "componentId": "table_item_vertical_mlc_1",
+              "label": "Номер, що переноситься:",
+              "value": "380880079809"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "componentId": "table_item_vertical_mlc_2",
+              "label": "Документ, який підтверджує пільгу:",
+              "value": "Пенсійне посвідчення СА 12345"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "componentId": "table_item_vertical_mlc_3",
+              "label": "Бажані дата та час перенесення:",
+              "value": "22.07.2025  10:00:00"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "componentId": "table_item_vertical_mlc_4",
+              "label": "Крайній термін відміни заяви до:",
+              "value": "24.07.2025  14:00:00 / Недоступно"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "btnLoadIconPlainGroupMlc": {
+        "componentId": "btnLoadIconPlainGroupMlc",
+        "items": [
+          {
+            "btnLoadPlainIconAtm": {
+              "label" : "Заява про ідентифікацію і заява про перенесення номера",
+              "icon" : "oldDocInfo",
+              "action": {
+                "type": "get-agreement"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "checkboxBtnOrg": {
+        "componentId": "checkbox",
+        "items": [
+          {
+            "checkboxSquareMlc": {
+              "componentId": "checkbox_btn",
+              "label": "Погоджуюсь з умовами надання послуги {link0}.\nПодаю заяви про ідентифікацію і перенесення номера.\nДаю згоду на {link1} ТОВ «лайфселл».",
+              "parameters": [
+                {
+                  "type": "link",
+                  "data":
+                  {
+                    "name": "link0",
+                    "alt": "перенесення номерів",
+                    "resource": "https://s.lifecell.ua/rzmnp"
+                  }
+                },
+                {
+                  "type": "link",
+                  "data":
+                  {
+                    "name": "link1",
+                    "alt": "передачу даних",
+                    "resource": "https://s.lifecell.ua/psdmnp"
+                  }
+                } ]
+            }
+          }
+        ],
+        "btnPrimaryWideAtm": {
+          "componentId": "btn_primary_wide",
+          "label": "Надіслати",
+          "action": {
+            "type": "commit"
+          }
+        }
+      }
+    }
+  ]
+}

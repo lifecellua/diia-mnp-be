@@ -1,0 +1,74 @@
+{
+  "variables": {
+    "TARIFFS": {
+      "target": "/body",
+      "header": 2,
+      "span": 2,
+      "variables": {
+        "INFO":{
+          "target": "%%0%%",
+          "variables": {
+            "STATUS": {
+              "target": "/cardMlcV2/chipStatusAtm"
+            },
+            "NAME": {
+              "target": "/cardMlcV2/label",
+              "variables": {
+                "NAME": {
+                  "target": "%%NAME%%"
+                },
+                "PRICE": {
+                  "target": "%%PRICE%%"
+                }
+              }
+            },
+            "DESCRIPTION": {
+              "target": "/cardMlcV2/descriptions"
+            },
+            "BENEFITS": {
+              "target": "/cardMlcV2/chips",
+              "variables": {
+                "CODE": {
+                  "target": "/chipStatusAtm/code"
+                },
+                "NAME": {
+                  "target": "/chipStatusAtm/name"
+                }
+              }
+            },
+            "ICON": {
+              "target": "/cardMlcV2/iconUrlAtm/url"
+            },
+            "ID": {
+              "target": "/cardMlcV2/action/resource"
+            }
+          }
+        },
+        "REF": {
+          "target": "%%1%%",
+          "variables": {
+            "DESCRIPTION": {
+              "target": "/listItemGroupOrg/items/0/accessibilityDescription",
+              "variables": {
+                "NAME": {
+                  "target": "%%NAME%%"
+                }
+              }
+            },
+            "LABEL": {
+              "target": "/listItemGroupOrg/items/0/label",
+              "variables": {
+                "NAME": {
+                  "target": "%%NAME%%"
+                }
+              }
+            },
+            "URL": {
+              "target": "/listItemGroupOrg/items/0/action/resource"
+            }
+          }
+        }
+      }
+    }
+  }
+}

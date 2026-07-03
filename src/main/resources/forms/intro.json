@@ -1,0 +1,181 @@
+{
+  "topGroup": [
+    {
+      "topGroupOrg": {
+        "navigationPanelMlc": {
+          "componentId": "navigation_panel",
+          "label": "Перенесення номера",
+          "ellipseMenu": [
+            {
+              "type": "faqCategory",
+              "name": "Питання та відповіді",
+              "code": "lifecellMpn"
+            },
+            {
+              "type": "supportServiceScreen",
+              "name": "Служба підтримки"
+            }
+          ],
+          "iconAtm": {
+            "componentId": "back",
+            "code": "back",
+            "accessibilityDescription": "Назад",
+            "action": {
+              "type": "back"
+            }
+          }
+        },
+        "componentId": "top_group_org"
+      }
+    }
+  ],
+  "body": [
+    {
+      "titleLabelMlc": {
+        "componentId": "title_label",
+        "label": "Вас вітає lifecell 👋"
+      }
+    },
+    {
+      "imageCardCarouselOrg": {
+        "componentId": "image_carousel",
+        "dotNavigationAtm": {
+          "count": 4,
+          "componentId": "dot_navigation"
+        },
+        "items": [
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner2.png",
+              "label": "Придбати eSIM",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/eswsdia"
+              },
+              "componentId": "component_1"
+            }
+          },
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner1.png",
+              "label": "Придбати SIM-карту",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/eswdia"
+              },
+              "componentId": "component_2"
+            }
+          },
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner3.png",
+              "label": "Детальніше",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/lsdia"
+              },
+              "componentId": "component_3"
+            }
+          },
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner4.png",
+              "label": "Детальніше",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/msdia"
+              },
+              "componentId": "component_4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtitleLabelMlc": {
+        "componentId": "subtitle_label",
+        "label": "Щоб скористатись послугою необхідно"
+      }
+    },
+    {
+      "listItemGroupOrg": {
+        "componentId": "list_item_group",
+        "items": [
+          {
+            "componentId": "list_item_1",
+            "label": "Подати заяви в Дії",
+            "description" : "Разом із заявою про перенесення номера автоматично створиться заява про ідентифікацію в ТОВ «лайфселл» ({link0}).",
+            "parameters": [
+              {
+                "type": "link",
+                "data":
+                {
+                  "name": "link0",
+                  "alt": "згідно з Рішенням НКЕК № 235 від 07.12.2022",
+                  "resource": "https://s.lifecell.ua/zlaw"
+                }
+              }]
+          },
+          {
+            "componentId": "list_item_2",
+            "label": "Придбати SIM-карту lifecell",
+            "description": "Її можна придбати у найближчому магазині або на сайті оператора.\n\nРекомендуємо обрати стартовий пакет без визначеного тарифного плану — {link0}.",
+            "parameters": [
+              {
+                "type": "link",
+                "data":
+                {
+                  "name": "link0",
+                  "alt": "«Універсальний»",
+                  "resource": "https://s.lifecell.ua/spdia"
+                }
+              }]
+          },
+          {
+            "componentId": "list_item_3",
+            "label": "Додати дані SIM-карти",
+            "description": "Ви можете внести їх одразу або пізніше — після створення заяви про перенесення номера."
+          },
+          {
+            "componentId": "list_item_4",
+            "label": "Дочекатися повідомлення від поточного оператора",
+            "description": "Він має підтвердити можливість перенесення номера протягом 2 годин."
+          },
+          {
+            "componentId": "list_item_5",
+            "label": "Отримати SMS із датою та часом перенесення"
+          },
+          {
+            "componentId": "list_item_6",
+            "label": "Дочекатися повідомлення про початок перенесення номера",
+            "description": "Замінити SIM-карту поточного оператора на SIM-карту lifecell.\n\nПоточна SIM-карта перестане працювати відразу після початку перенесення."
+          },
+          {
+            "componentId": "list_item_7",
+            "label": "Крайній термін відміни заяви",
+            "description": "Скасувати заяву можна не пізніше ніж за 4 робочі години до вказаного бажаного часу."
+          }
+        ]
+      }
+    }
+  ],
+  "bottomGroup": [
+    {
+      "bottomGroupOrg": {
+        "componentId": "bottom_group_org",
+        "btnPrimaryDefaultAtm": {
+          "componentId" : "on_boarding_new_mnp_button_id",
+          "label": "Подати заяву",
+          "state": "enabled",
+          "action": {
+            "type": "tariffs"
+          }
+        }
+      }
+    }
+  ]
+}

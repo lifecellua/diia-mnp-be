@@ -1,0 +1,7 @@
+{
+  "variables": {
+    "CANCEL": {
+      "target": "/bottomGroup/0/bottomGroupOrg/btnPlainAtm"
+    }
+  }
+}

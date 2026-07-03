@@ -1,0 +1,40 @@
+{
+  "variables": {
+    "NAME": {
+      "target": "/body/3/tableBlockOrg/items/0/tableItemHorizontalMlc/value"
+    },
+    "DOCUMENT_TYPE": {
+      "target": "/body/3/tableBlockOrg/items/1/tableItemHorizontalMlc/value"
+    },
+    "DOCUMENT_ID": {
+      "target": "/body/3/tableBlockOrg/items/2/tableItemHorizontalMlc/value"
+    },
+    "PHONE_NUMBER": {
+      "target": "/body/4/tableBlockOrg/items/0/tableItemVerticalMlc/value"
+    },
+    "PC": {
+      "target": "/body/4/tableBlockOrg/items/1",
+      "variables": {
+        "DOCUMENT_TYPE_AND_ID": {
+          "target": "/tableItemVerticalMlc/value"
+        }
+      }
+    },
+    "PORTING_DATE": {
+      "target": "/body/4/tableBlockOrg/items/2",
+      "variables": {
+        "DATE": {
+          "target": "/tableItemVerticalMlc/value"
+        }
+      }
+    },
+    "CANCELING_DATE": {
+      "target": "/body/4/tableBlockOrg/items/3",
+      "variables": {
+        "DATE": {
+          "target": "/tableItemVerticalMlc/value"
+        }
+      }
+    }
+  }
+}

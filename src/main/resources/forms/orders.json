@@ -1,0 +1,171 @@
+{
+  "topGroup": [
+    {
+      "topGroupOrg": {
+        "navigationPanelMlc": {
+          "componentId": "navigation_panel",
+          "label": "Перенесення номера",
+          "ellipseMenu": [
+            {
+              "type": "faqCategory",
+              "name": "Питання та відповіді",
+              "code": "lifecellMpn"
+            },
+            {
+              "type": "supportServiceScreen",
+              "name": "Служба підтримки"
+            }
+          ],
+          "iconAtm": {
+            "componentId": "back",
+            "code": "back",
+            "accessibilityDescription": "Назад",
+            "action": {
+              "type": "back"
+            }
+          }
+        },
+        "componentId": "top_group_org"
+      }
+    }
+  ],
+  "body": [
+    {
+      "titleLabelMlc": {
+        "componentId": "title_label",
+        "label": "Вас вітає lifecell 👋"
+      }
+    },
+    {
+      "imageCardCarouselOrg": {
+        "componentId": "image_carousel",
+        "dotNavigationAtm": {
+          "count": 4,
+          "componentId": "dot_navigation"
+        },
+        "items": [
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner2.png",
+              "label": "Придбати eSIM",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/eswsdia"
+              },
+              "componentId": "component_1"
+            }
+          },
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner1.png",
+              "label": "Придбати SIM-карту",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/eswdia"              
+              },
+              "componentId": "component_2"
+            }
+          },
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner3.png",
+              "label": "Детальніше",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/lsdia"
+              },
+              "componentId": "component_3"
+            }
+          },
+          {
+            "imageCardMlc": {
+              "image": "https://www.lifecell.ua/cms/uploads/medialibrary/2026/02/banner4.png",
+              "label": "Детальніше",
+              "iconRight": "ellipseWhiteArrowRight",
+              "action": {
+                "type": "externalLink",
+                "resource": "s.lifecell.ua/msdia"
+              },
+              "componentId": "component_4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "subtitleLabelMlc": {
+        "componentId": "subtitle_label",
+        "label": "Попередні заяви:"
+      }
+    },
+    {
+      "cardMlcV2": {
+        "chipStatusAtm": {
+          "componentId": "chip_status_atm",
+          "code": "pending",
+          "name": "В ПРОЦЕСІ",
+          "type": "pending"
+        },
+        "componentId": "order_id_1",
+        "label": "380672107967",
+        "descriptions": [
+          "Заява від 12.04.2025"
+        ],
+        "smallIconAtm": {
+          "code": "ellipseArrowRight"
+        },
+        "action": {
+          "type": "order",
+          "resource": "123"
+        },
+        "paddingMode": {
+          "side": "large",
+          "top": "large"
+        }
+      }
+    },
+    {
+      "cardMlcV2": {
+        "chipStatusAtm": {
+          "componentId": "chip_status_atm",
+          "code": "success",
+          "name": "ЗАВЕРШЕНО",
+          "type": "success"
+        },
+        "componentId": "order_id_2",
+        "label": "380672107967",
+        "descriptions": [
+          "Заява від 12.04.2025"
+        ],
+        "smallIconAtm": {
+          "code": "ellipseArrowRight"
+        },
+        "action": {
+          "type": "order",
+          "resource": "123"
+        },
+        "paddingMode": {
+          "side": "large",
+          "top": "large"
+        }
+      }
+    }
+  ],
+  "bottomGroup": [
+    {
+      "bottomGroupOrg": {
+        "componentId": "bottom_group_org",
+        "btnPrimaryDefaultAtm": {
+          "label": "Нова заява",
+          "state": "enabled",
+          "action": {
+            "type": "create"
+          }
+        }
+      }
+    }
+  ]
+}

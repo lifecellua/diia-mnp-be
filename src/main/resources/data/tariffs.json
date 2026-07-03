@@ -1,0 +1,30 @@
+[
+  {
+    "id": "IND_PRE_TURBOTA_COMM:2025MAR20",
+    "name": "Турбота",
+    "price": "190 грн / місяць",
+    "description": "Доступний за наявності статусу пенсіонера",
+    "icon": "https://www.lifecell.ua/cms/uploads/medialibrary/2025/11/turbota.png",
+    "benefits": [
+      "20 ГБ",
+      "1000 хв",
+      "Безліміт на lifecell"
+    ],
+    "url": "s.lifecell.ua/sendia",
+    "isSpecial": true
+  },
+  {
+    "id": "IND_PRE_MAXI",
+    "name": "Максі",
+    "price": "270 грн / 4 тижні",
+    "description": "*Перші 50 ГБ без обмежень, далі – до 1 Мбіт/с",
+    "icon": "https://www.lifecell.ua/cms/uploads/medialibrary/2025/11/maxi.png",
+    "benefits": [
+      "25 ГБ або безліміт*",
+      "750 хв або 1500 хв",
+      "Безліміт на lifecell"
+    ],
+    "url": "s.lifecell.ua/msdia",
+    "isSpecial": false
+  }
+]

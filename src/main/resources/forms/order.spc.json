@@ -1,0 +1,54 @@
+{
+  "variables": {
+    "STATUS": {
+      "target": "/body/1",
+      "variables": {
+        "ICON": {
+          "target": "/statusMessageMlc/icon"
+        },
+        "TITLE": {
+          "target": "/statusMessageMlc/title"
+        },
+        "TEXT": {
+          "target": "/statusMessageMlc/text"
+        }
+      }
+    },
+    "INFO": {
+      "target": "/body/2",
+      "variables": {
+        "DATE_AT": {
+          "target": "/tableBlockOrg/items/0/tableItemVerticalMlc/value"
+        },
+        "NO": {
+          "target": "/tableBlockOrg/items/1/tableItemVerticalMlc/value"
+        },
+        "DATE_WHEN": {
+          "target": "/tableBlockOrg/items/2",
+          "variables": {
+            "VALUE": {
+              "target": "/tableItemVerticalMlc/value"
+            }
+          }
+        },
+        "PHONE": {
+          "target": "/tableBlockOrg/items/3/tableItemVerticalMlc/value"
+        },
+        "TARIFF": {
+          "target": "/tableBlockOrg/items/4/tableItemVerticalMlc/value"
+        }
+      }
+    },
+    "EXTRA": {
+      "target": "/bottomGroup/0",
+      "variables": {
+        "SIM": {
+          "target": "/bottomGroupOrg/btnPrimaryDefaultAtm"
+        },
+        "CANCEL": {
+          "target": "/bottomGroupOrg/btnPlainAtm"
+        }
+      }
+    }
+  }
+}
