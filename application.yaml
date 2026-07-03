@@ -1,0 +1,125 @@
+logging:
+    file.name:
+    # structured.format.console: com.lifecell.diia.be.configuration.ext.JsonStructuredLoggingFormatter
+    level:
+        root: info
+        org.flywaydb: debug
+        com.lifecell.diia.be: debug
+
+server:
+    address: localhost
+    port: 9191
+    error:
+        include-message: always
+        # include-binding-errors: always
+
+
+spring:
+    application:
+        name: Lifecell-Dia-Be
+    flyway:
+        enabled: true
+        fail-on-missing-locations: true
+        locations: classpath:db
+    main:
+        banner-mode: 'off'
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/diia
+        username: diia
+        password: diia
+    grpc:
+        server:
+            port: 9191
+        client:
+            channels:
+                diia-documents-service:
+                    address: localhost:9292
+                    negotiation-type: plaintext
+                diia-user-service:
+                    address: localhost:9292
+                    negotiation-type: plaintext
+                diia-notification-service:
+                    address: localhost:9292
+                    negotiation-type: plaintext
+
+    rabbitmq:
+        host: localhost
+        port: 5672
+        virtual-host: "/"
+        username: rabbit
+        password: rabbit
+        listener:
+            simple:
+                retry:
+                    enabled: true
+                    initial-interval: 5000
+                    max-attempts: 3
+                    max-interval: 300000
+                    multiplier: 3.0
+                prefetch: 300
+                concurrency: 4
+                max-concurrency: 8
+            direct:
+                retry:
+                    enabled: false
+
+management:
+    server:
+        port: 3131
+    endpoints.web.exposure.include: '*'
+    endpoint:
+        health.show-details: always
+
+diia:
+    messaging:
+        enabled: true
+        queue:
+            type: "quorum"
+
+diia-metrics:
+    service-name: "lifecell-mnp"
+    rabbit:
+        diia-handler:
+            enabled: true
+        external-bus:
+            enabled: true
+
+com.lifecell.diia.be:
+    bus:
+        external:
+            exchange:
+                name: TopicExternalRepo
+                type: direct
+                routingKey: queue.diia.lifecell.mnp.req
+    flow:
+        session:
+            timeout: 15m
+        stage:
+            agreement:
+                file:
+                    timeout: 3s
+                    wait: 20s
+            commit:
+                timeout: 3s
+                wait: 20s
+    local:
+        zone-id: Europe/Kyiv
+    service:
+        diia:
+            document:
+                states:
+                    - 200
+        orders:
+            timeout: 40d
+            missingTimeout: 41d
+            maxSize: 50
+            refreshOrdersActiveCron: "0 0 18 * * *"
+            refreshOrdersActiveHoursLimit: 5
+            refreshOrdersActiveLockAtLeastFor: "1m"
+            refreshOrdersActiveLockAtMostFor: "9m"
+        push-notifications:
+            donorAcceptWaitSimCard: 155101001
+            donorAccept: 155101002
+            activatedMsisdn: 155101003
+            broadcast: 155101004

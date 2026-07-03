@@ -1,0 +1,7 @@
+{
+  "variables": {
+    "HELLO" : {
+      "target": "/body/0/titleLabelMlc/label"
+    }
+  }
+}

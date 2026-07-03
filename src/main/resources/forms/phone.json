@@ -1,0 +1,116 @@
+{
+  "topGroup": [
+    {
+      "topGroupOrg": {
+        "navigationPanelMlc": {
+          "componentId": "navigation_panel",
+          "label": "Перенесення номера",
+          "ellipseMenu": [
+            {
+              "type": "faqCategory",
+              "name": "Питання та відповіді",
+              "code": "lifecellMpn"
+            },
+            {
+              "type": "supportServiceScreen",
+              "name": "Служба підтримки"
+            }
+          ],
+          "iconAtm": {
+            "componentId": "back",
+            "code": "back",
+            "accessibilityDescription": "Назад",
+            "action": {
+              "type": "back"
+            }
+          }
+        },
+        "componentId": "top_group_org"
+      }
+    }
+  ],
+  "body": [
+    {
+      "tickerAtm": {
+        "componentId": "ticker_phone_number",
+        "usage": "document",
+        "type": "warning",
+        "value": "Не вставляйте SIM-карту до завершення перенесення • "
+      }
+    },
+    {
+      "titleLabelMlc": {
+        "componentId": "title_label",
+        "label": "Номер, що бажаєте перенести"
+      }
+    },
+    {
+      "attentionIconMessageMlc": {
+        "componentId": "attention_phone_number",
+        "smallIconAtm": {
+          "componentId": "small_icon_atm",
+          "code": "attention"
+        },
+        "text": "Якщо номер зареєстровано на іншу людину, заяву про перенесення буде відхилено.",
+        "backgroundMode": "info"
+      }
+    },
+    {
+      "questionFormsOrg": {
+        "componentId": "form_phone_number",
+        "id": "section1",
+        "items": [
+          {
+            "inputPhoneCodeOrg": {
+              "componentId": "input_phone_number",
+              "label": "Вкажіть ваш номер телефону",
+              "hint": "Дані взято з Bank ID. Ви можете вказати інший номер.",
+              "mandatory": true,
+              "inputCode": "country",
+              "inputPhoneMlc": {
+                "componentId": "phonemlc",
+                "inputCode": "phone",
+                "mandatory": true,
+                "value": ""
+              },
+              "codeValueIsEditable": false,
+              "codeValueId": "ukr",
+              "codes": [
+                {
+                  "id": "ukr",
+                  "maskCode": "## ### ## ##",
+                  "placeholder": "00 000 00 00",
+                  "label": "+380",
+                  "value": "380",
+                  "icon": "\uD83C\uDDFA\uD83C\uDDE6",
+                  "description": "\uD83C\uDDFA\uD83C\uDDE6 Україна (+380)",
+                  "validation": [
+                    {
+                      "regexp": "^\\d{12}$",
+                      "flags": ["i","g"],
+                      "errorMessage": "Невірний формат номера"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "bottomGroup": [
+    {
+      "bottomGroupOrg": {
+        "componentId": "bottom_group_org",
+        "btnPrimaryDefaultAtm": {
+          "label": "Далі",
+          "state": "disabled",
+          "action": {
+            "type": "phone-post"
+          }
+        }
+      }
+    }
+  ]
+}

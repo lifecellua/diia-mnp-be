@@ -1,0 +1,10 @@
+{
+  "variables": {
+    "COUNTRY": {
+      "target": "/body/3/questionFormsOrg/items/0/inputPhoneCodeOrg/codeValueId"
+    },
+    "PHONE": {
+      "target": "/body/3/questionFormsOrg/items/0/inputPhoneCodeOrg/inputPhoneMlc/value"
+    }
+  }
+}

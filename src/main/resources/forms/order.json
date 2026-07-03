@@ -1,0 +1,134 @@
+{
+  "topGroup": [
+    {
+      "topGroupOrg": {
+        "navigationPanelMlc": {
+          "componentId": "navigation_panel",
+          "label": "Перенесення номера",
+          "ellipseMenu": [
+            {
+              "type": "faqCategory",
+              "name": "Питання та відповіді",
+              "code": "lifecellMpn"
+            },
+            {
+              "type": "supportServiceScreen",
+              "name": "Служба підтримки"
+            }
+          ],
+          "iconAtm": {
+            "componentId": "back",
+            "code": "back",
+            "accessibilityDescription": "Назад",
+            "action": {
+              "type": "back"
+            }
+          }
+        },
+        "componentId": "top_group_org"
+      }
+    }
+  ],
+  "body": [
+    {
+      "titleLabelMlc": {
+        "componentId": "title_label",
+        "label": "Стан заяви"
+      }
+    },
+    {
+      "statusMessageMlc": {
+        "componentId": "status_message",
+        "icon": "%%ICON%%",
+        "title": "%%TITLE%%",
+        "text": "%%TEXT%%",
+        "parameters": [
+          {
+            "type": "link",
+            "data":
+            {
+              "name": "link0",
+              "alt": "eSIM",
+              "resource": "https://shop.lifecell.ua/uk/product/esim/1787/2943/"
+            }
+          },
+          {
+            "type": "link",
+            "data":
+            {
+              "name": "link1",
+              "alt": "онлайн",
+              "resource": "https://s.lifecell.ua/spdia"
+            }
+          },
+          {
+            "type": "link",
+            "data":
+            {
+              "name": "link2",
+              "alt": "My lifecell",
+              "resource": "https://d.lifecell.ua/tRUf"
+            }
+          }]
+      }
+    },
+    {
+      "tableBlockOrg": {
+        "componentId": "user_phone_table",
+        "items": [
+          {
+            "tableItemVerticalMlc": {
+              "label": "Дата подачі заяви:",
+              "value": "12 квітня 2025 року"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "label": "Номер заяви:",
+              "value": "123456"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "label": "Дата і час перенесення:",
+              "value": "13.11.2025 9:00-12:00"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "label": "Номер телефону:",
+              "value": "380672107967"
+            }
+          },
+          {
+            "tableItemVerticalMlc": {
+              "label": "Тариф:",
+              "value": "Турбота"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "bottomGroup": [
+    {
+      "bottomGroupOrg": {
+        "componentId": "bottom_group_org",
+        "btnPrimaryDefaultAtm": {
+          "componentId": "add_sim_button_id",
+          "label": "Додати SIM-карту",
+          "action": {
+            "type": "sim"
+          }
+        },
+        "btnPlainAtm" : {
+          "componentId": "cancel_request_button_id",
+          "label" : "Скасувати заяву",
+          "action": {
+            "type": "cancel"
+          }
+        }
+      }
+    }
+  ]
+}

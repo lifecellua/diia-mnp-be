@@ -1,0 +1,28 @@
+{
+  "variables": {
+    "ORDERS": {
+      "target": "/body",
+      "header": 3,
+      "variables": {
+        "CODE": {
+          "target": "/cardMlcV2/chipStatusAtm/code"
+        },
+        "NAME": {
+          "target": "/cardMlcV2/chipStatusAtm/name"
+        },
+        "TYPE": {
+          "target": "/cardMlcV2/chipStatusAtm/type"
+        },
+        "LABEL": {
+          "target": "/cardMlcV2/label"
+        },
+        "DESCRIPTION": {
+          "target": "/cardMlcV2/descriptions"
+        },
+        "RESOURCE" : {
+          "target": "/cardMlcV2/action/resource"
+        }
+      }
+    }
+  }
+}

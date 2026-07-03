@@ -1,0 +1,35 @@
+{
+  "value": "value",
+  "value_local": "test %%VALUE%% test",
+  "object": {
+    "field": "value"
+  },
+  "values": [
+    "value1", "value2", "value3"
+  ],
+  "objects010": [
+    { "field": "value" },
+    { "field": "value" },
+    { "field": "value" }
+  ],
+  "objects110": [
+    { "header": "header" },
+    { "field": "value" },
+    { "field": "value" }
+  ],
+  "objects111": [
+    { "header": "header" },
+    { "field": "value" },
+    { "footer": "footer" }
+  ],
+  "objects020": [
+    { "field1": "value1" },
+    { "field2": "value2" }
+  ],
+  "objects121": [
+    { "header": "header" },
+    { "field1": "value1" },
+    { "field2": "value2" },
+    { "footer": "footer" }
+  ]
+}
